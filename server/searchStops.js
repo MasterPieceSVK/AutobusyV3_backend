@@ -26,7 +26,7 @@ searchStopsRouter.post("/:filter/:longitude/:latitude", (req, res) => {
         Referer: "https://clientapi.dopravnakarta.sk/",
         "Referrer-Policy": "strict-origin-when-cross-origin",
       },
-      data: `filter=${filter}&maxCount=25&latitude=${latitude}&longitude=${longitude}&stopTypes=7&cityID=NaN`,
+      data: `filter=${filter}&maxCount=50&latitude=${latitude}&longitude=${longitude}&stopTypes=7&cityID=NaN`,
     })
       .then(function (response) {
         res.json(response.data);
