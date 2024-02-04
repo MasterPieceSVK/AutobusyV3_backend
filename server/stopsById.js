@@ -3,9 +3,11 @@ const stopsByIdRouter = express.Router();
 module.exports = stopsByIdRouter;
 const axios = require("axios");
 
-stopsByIdRouter.post("/:stop_id", (req, res) => {
-  const { stop_id } = req.params;
+stopsByIdRouter.post("/:stop_id/:time", (req, res) => {
+  const { stop_id, time } = req.params;
   let date = new Date();
+  date.setHours(date.getHours() - time);
+
   let encodedDate = encodeURIComponent(date.toUTCString());
 
   const fetchData = async () => {
