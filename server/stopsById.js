@@ -31,7 +31,7 @@ stopsByIdRouter.post("/:stop_id/:time", (req, res) => {
         Referer: "https://clientapi.dopravnakarta.sk/",
         "Referrer-Policy": "strict-origin-when-cross-origin",
       },
-      data: `stopID=${stop_id}&platformNumber=-1&fromDateTime=${encodedDate}&maxDepartures=50&maxMinutes=1440`,
+      data: `stopID=${stop_id}&platformNumber=-1&fromDateTime=${encodedDate}&maxDepartures=100&maxMinutes=1440`,
     })
       .then(function (response) {
         res.json(response.data);
