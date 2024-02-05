@@ -14,7 +14,7 @@ nearestDeparturesRouter.post(
     let encodedDate = encodeURIComponent(date.toUTCString());
     console.log(encodedDate);
 
-    let data = `Longitude=${longitude}&Latitude=${latitude}&fromDateTime=${encodedDate}&maxStops=1&maxMinutes=1440&radiusKilometers=3&maxDepartures=10`;
+    let data = `Longitude=${longitude}&Latitude=${latitude}&fromDateTime=${encodedDate}&maxStops=1&maxMinutes=1440&radiusKilometers=3&maxDepartures=50`;
 
     axios({
       method: "post",
