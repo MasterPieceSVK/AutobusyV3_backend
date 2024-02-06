@@ -7,7 +7,9 @@ nearestDeparturesRouter.post(
   "/:longitude/:latitude/:time",
   async (req, res) => {
     const { longitude, latitude, time } = req.params;
-
+    if (time == 2) {
+      time = 0;
+    }
     let date = new Date();
     date.setHours(date.getHours() - time);
 
