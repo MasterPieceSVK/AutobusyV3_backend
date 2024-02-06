@@ -5,6 +5,9 @@ const axios = require("axios");
 
 stopsByIdRouter.post("/:stop_id/:time", (req, res) => {
   const { stop_id, time } = req.params;
+  if (time == 2) {
+    time = 0;
+  }
   let date = new Date();
   date.setHours(date.getHours() - time);
 
