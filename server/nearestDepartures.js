@@ -6,7 +6,7 @@ const axios = require("axios");
 nearestDeparturesRouter.post(
   "/:longitude/:latitude/:time",
   async (req, res) => {
-    const { longitude, latitude, time } = req.params;
+    let { longitude, latitude, time } = req.params;
     if (time == 2) {
       time = 0;
     }

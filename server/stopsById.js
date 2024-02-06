@@ -4,7 +4,7 @@ module.exports = stopsByIdRouter;
 const axios = require("axios");
 
 stopsByIdRouter.post("/:stop_id/:time", (req, res) => {
-  const { stop_id, time } = req.params;
+  let { stop_id, time } = req.params;
   if (time == 2) {
     time = 0;
   }
