@@ -22,4 +22,7 @@ apiRouter.use("/searchStops", searchStopsRouter);
 const stopsByIdRouter = require("./stopsById");
 apiRouter.use("/stopsById", stopsByIdRouter);
 
+const nameOfStopByIdRouter = require("./nameOfStopById");
+apiRouter.use("/stopName", nameOfStopByIdRouter);
+
 module.exports = apiRouter;
