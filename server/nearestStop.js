@@ -23,7 +23,7 @@ nearestStopRouter.post("/:longitude/:latitude", async (req, res) => {
       Referer: "https://clientapi.dopravnakarta.sk/",
       "Referrer-Policy": "strict-origin-when-cross-origin",
     };
-    const data = `Longitude=${longitude}&Latitude=${latitude}&maxCount=13&radiusKilometers=3&cityID=0`;
+    const data = `Longitude=${longitude}&Latitude=${latitude}&maxCount=12&radiusKilometers=3&cityID=0`;
     try {
       const response = await axios.post(url, data, { headers });
       // console.log("Response data:", response.data);
